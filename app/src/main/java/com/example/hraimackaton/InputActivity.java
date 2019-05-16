@@ -29,10 +29,5 @@ public abstract class InputActivity extends AppCompatActivity {
         String maxLeave = maxLeaveField.getText().toString();
         EditText commentsField = (EditText) findViewById(R.id.textViewComment);
         String comments = commentsField.getText().toString();
-        EditText disp = findViewById(R.id.textViewDisp);
-        String toDisp = "Name: " + name + " phone: " + phone + " facebook: " + facebook + " from: " +
-                from + " to: " + dest + " min leave time: " + minLeave + " max leave time: " +
-                maxLeave + " comments: " + comments;
-        disp.setText(toDisp);
     }
 }
