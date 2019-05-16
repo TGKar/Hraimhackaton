@@ -1,85 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".DriverScreen">
 
-    <EditText
-        android:id="@+id/textViewDriver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/textViewFacebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="facebook"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <ImageView android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:id="@+id/imageView1"
+        android:src="@drawable/driver_background" android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"></ImageView>
 
-    <LinearLayout
+    <android.widget.LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DriverScreen">
+
+        <EditText
+            android:id="@+id/textViewDriverName"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/textViewPhone"
+            android:layout_width="291dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Phone number"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/textViewFacebook"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:hint="facebook"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/textViewFrom"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:hint="From"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"></LinearLayout>
+
+        <EditText
+            android:id="@+id/textViewMinLeaveTime"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Destination"
+            android:inputType="textPersonName" />
+
+        <EditText
+        android:id="@+id/textViewMaxLeaveTime"
+        android:layout_width="177dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <EditText
-            android:id="@+id/textViewFrom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="source"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:ems="10"
+        android:hint="Min Leaving Time"
+        android:inputType="time" />
 
         <EditText
-            android:id="@+id/textViewDestination"
-            android:layout_width="wrap_content"
+            android:id="@+id/maxLeaveTime"
+            android:layout_width="177dp"
             android:layout_height="wrap_content"
-            android:hint="destination"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+            android:ems="10"
+            android:hint="Max Leaving Time"
+            android:inputType="time" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <EditText
-            android:id="@+id/textViewMinHour"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/sendDriverInfo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="earliest time to go"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:onClick="sendDriverInfo"
+            android:text="Send" />
 
-        <EditText
-            android:id="@+id/textViewMaxHour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="latest time to go"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="send"
-        />
-</android.widget.LinearLayout>
+    </android.widget.LinearLayout>
+
+</RelativeLayout>
+
