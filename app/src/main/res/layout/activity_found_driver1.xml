@@ -17,16 +17,12 @@
         android:onClick="agreeToDriver"
         android:text="agree" />
 
-    <Butto
+    <Button
         android:layout_marginTop="10dp"
         android:id="@+id/disagreeToDriver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="disagreeToDriver"
         android:text="disagree" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColorLink=""
-        />
+
 </RelativeLayout>

@@ -11,8 +11,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.HashMap;
-
 public class DriverScreen extends InputActivity {
 
     @Override
@@ -24,6 +22,7 @@ public class DriverScreen extends InputActivity {
 
         DatabaseReference myRef = database.getReference("riders");
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
