@@ -18,6 +18,5 @@ public class DriverScreen extends AppCompatActivity {
     }
 
     public void sendDriverInfo(View view) {
-        EditText nameField = findViewById()
     }
 }
