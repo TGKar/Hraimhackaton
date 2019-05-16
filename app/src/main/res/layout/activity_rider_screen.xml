@@ -1,24 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RiderScreen">
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:id="@+id/imageView1"
+        android:src="@drawable/rider_background" android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"></ImageView>
 
-    <TextView
-        android:id="@+id/textViewRider"
-        android:layout_width="wrap_content"
-        android:layout_height="118dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
-        android:layout_marginTop="339dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginRight="146dp"
-        android:layout_marginBottom="274dp"
-        android:text="Blah Blah Blah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+    <android.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DriverScreen">
+
+        <EditText
+            android:id="@+id/textViewDriverName"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/textViewPhone"
+            android:layout_width="291dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Phone number"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/textViewFacebook"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:hint="facebook"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/textViewFrom"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:hint="From"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/textViewDestination"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Destination"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textViewMinLeaveTime"
+                android:layout_width="160dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:hint="Min Leaving Time"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/textViewMaxLeaveTime"
+                android:layout_width="160dp"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:layout_marginHorizontal="50dp"
+                android:hint="Max Leaving Time"
+                android:inputType="time" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+        <EditText
+            android:id="@+id/textViewComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Comments"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:layout_marginTop="100dp"
+            android:id="@+id/sendDriverInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sendDriverInfo"
+            android:text="Send" />
+
+
+    </android.widget.LinearLayout>
+
+
+</RelativeLayout>
+

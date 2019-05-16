@@ -1,45 +1,17 @@
 package com.example.hraimackaton;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-public class DriverScreen extends AppCompatActivity {
+import android.os.Bundle;
+
+public class DriverScreen extends InputActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_screen);
-
-//        TextView textView = findViewById(R.id.textViewDriver);
-//        textView.setText("I DRIVE");
     }
 
-    public void sendDriverInfo(View view) {
-        EditText nameField = (EditText) findViewById(R.id.textViewDriverName);
-        String name = nameField.getText().toString();
-        EditText phoneField = (EditText) findViewById(R.id.textViewPhone);
-        String phone = phoneField.getText().toString();
-        EditText facebookField = (EditText) findViewById(R.id.textViewFacebook);
-        String facebook = facebookField.getText().toString();
-        EditText fromField = (EditText) findViewById(R.id.textViewFrom);
-        String from = fromField.getText().toString();
-        EditText destField = (EditText) findViewById(R.id.textViewDestination);
-        String dest = destField.getText().toString();
-        EditText minLeaveField = (EditText) findViewById(R.id.textViewMinLeaveTime);
-        String minLeave = minLeaveField.getText().toString();
-        EditText maxLeaveField = (EditText) findViewById(R.id.textViewMinLeaveTime);
-        String maxLeave = maxLeaveField.getText().toString();
-        EditText commentsField = (EditText) findViewById(R.id.textViewComment);
-        String comments = commentsField.getText().toString();
-        EditText disp = findViewById(R.id.textViewDisp);
-        String toDisp = "Name: " + name + " phone: " + phone + " facebook: " + facebook + " from: " +
-                from + " to: " + dest + " min leave time: " + minLeave + " max leave time: " +
-                maxLeave + " comments: " + comments;
-        disp.setText(toDisp);
+    public boolean isDriver() {
+        return true;
     }
 }
