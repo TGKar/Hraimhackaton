@@ -26,14 +26,13 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="317dp"/>
 
-    <EditText
-        android:id="@+id/editText"
+    <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="597dp" />
+        android:onClick="sendMessage"
+        android:text="SHIT"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="341dp" />
 
 </android.support.constraint.ConstraintLayout>
