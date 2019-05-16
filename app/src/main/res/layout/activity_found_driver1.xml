@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:id="@+id/imageView1"
+        android:src="@drawable/rider_background" android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"></ImageView>
+    <Button
+        android:layout_marginTop="100dp"
+        android:id="@+id/agreeToDriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="agreeToDriver"
+        android:text="agree" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/disagreeToDriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="disagreeToDriver"
+        android:text="disagree" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorLink="
+https://www.google.com/maps/dir/?api=1&origin=32.1258379%2C+34.7975654&destination=32.1584095%2C+34.9765118&waypoints=31.7792358%2C+35.2233658%7C31.65868%2C+35.144089"
+        />
+
+"https://www.google.com/maps/dir/?api=1&origin=32.1258379%2C+34.7975654&destination=32.1584095%2C+34.9765118&waypoints=31.7792358%2C+35.2233658%7C31.65868%2C+35.144089"
+</RelativeLayout>

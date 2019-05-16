@@ -111,6 +111,14 @@
             android:onClick="sendDriverInfo"
             android:text="Send" />
 
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/sendDriverFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="found"
+            android:text="found" />
+
 
     </android.widget.LinearLayout>
 
