@@ -15,9 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:onClick="toRider"
         android:scaleType="centerInside"
-        android:text="Rider"
+        android:onClick="toRider"
         android:background="@null"
         app:srcCompat="@drawable/open_rider" />
 
@@ -25,9 +24,10 @@
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerInside"
-        android:background="@null"
         android:layout_weight="1"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:onClick="toDriver"
         app:srcCompat="@drawable/open_driver" />
 
 
