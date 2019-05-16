@@ -119,6 +119,13 @@
             android:onClick="found"
             android:text="found" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/navigate_button"
+            android:text="nav"
+            />
+
 
     </android.widget.LinearLayout>
 
