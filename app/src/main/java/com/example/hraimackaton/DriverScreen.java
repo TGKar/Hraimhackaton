@@ -19,24 +19,8 @@ public class DriverScreen extends InputActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_screen);
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-        DatabaseReference myRef = database.getReference("riders");
-        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue().toString();
-                Log.i("stam", "Value is: " + value);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("drivers");
+        mDatabase.child()
     }
 
     public boolean isDriver() {

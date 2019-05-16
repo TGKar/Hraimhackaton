@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+
 public abstract class InputActivity extends AppCompatActivity {
 
     abstract boolean isDriver();
@@ -29,5 +31,16 @@ public abstract class InputActivity extends AppCompatActivity {
         String maxLeave = maxLeaveField.getText().toString();
         EditText commentsField = (EditText) findViewById(R.id.textViewComment);
         String comments = commentsField.getText().toString();
+    }
+
+    void write_new_user(String phone, String name, String facebook, String start_address,
+                        String arrival_address, String leave_time_min, String leave_time_max) {
+        DatabaseReference myRef = database.getReference("riders");
+        if(isDriver()) {
+            myRef.child()
+        }
+        else {
+
+        }
     }
 }
