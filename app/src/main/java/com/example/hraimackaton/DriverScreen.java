@@ -22,15 +22,24 @@ public class DriverScreen extends AppCompatActivity {
     public void sendDriverInfo(View view) {
         EditText nameField = (EditText) findViewById(R.id.textViewDriverName);
         String name = nameField.getText().toString();
-        EditText faceBookField = (EditText) findViewById(R.id.textViewFacebook);
-        String facebook = nameField.getText().toString();
+        EditText phoneField = (EditText) findViewById(R.id.textViewPhone);
+        String phone = phoneField.getText().toString();
+        EditText facebookField = (EditText) findViewById(R.id.textViewFacebook);
+        String facebook = facebookField.getText().toString();
         EditText fromField = (EditText) findViewById(R.id.textViewFrom);
         String from = fromField.getText().toString();
-//        EditText destinationField = (EditText) findViewById(R.id.textViewDestination);
-//        String destination = destinationField.getText().toString();
-//        EditText minLeaveField = (EditText) findViewById(R.id.textViewMinHour);
-//        minLeave
-//        TextView show = findViewById(R.id.textView);
-//        show.setText(name);
+        EditText destField = (EditText) findViewById(R.id.textViewDestination);
+        String dest = destField.getText().toString();
+        EditText minLeaveField = (EditText) findViewById(R.id.textViewMinLeaveTime);
+        String minLeave = minLeaveField.getText().toString();
+        EditText maxLeaveField = (EditText) findViewById(R.id.textViewMinLeaveTime);
+        String maxLeave = maxLeaveField.getText().toString();
+        EditText commentsField = (EditText) findViewById(R.id.textViewComment);
+        String comments = commentsField.getText().toString();
+        EditText disp = findViewById(R.id.textViewDisp);
+        String toDisp = "Name: " + name + " phone: " + phone + " facebook: " + facebook + " from: " +
+                from + " to: " + dest + " min leave time: " + minLeave + " max leave time: " +
+                maxLeave + " comments: " + comments;
+        disp.setText(toDisp);
     }
 }
