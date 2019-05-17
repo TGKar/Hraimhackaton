@@ -3,8 +3,10 @@ package com.example.hraimackaton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -14,12 +16,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 public class DriverScreen extends InputActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Give a Ride");
         setContentView(R.layout.activity_driver_screen);
         //DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -33,11 +37,9 @@ public class DriverScreen extends InputActivity {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-                Log.i("stam", "Value is: " + value);
-                TextView field = findViewById(R.id.showMeTheMoney);
-                field.setText(value);
-                Intent intent = new Intent(mySelf(), gotDrive.class);
-                startActivity(intent);
+//                Log.i("stam", "Value is: " + value);
+//                TextView field = findViewById(R.id.showMeTheMoney);
+//                field.setText(value);
             }
 
             @Override
@@ -45,11 +47,8 @@ public class DriverScreen extends InputActivity {
 
             }
         });
-
-
-
-
         }
+
     public DriverScreen mySelf() {
         return this;
     }
@@ -57,5 +56,10 @@ public class DriverScreen extends InputActivity {
 
     public boolean isDriver() {
         return true;
+    }
+
+    public void acceptRide(View view) {
+        Intent intent = new Intent(mySelf(), gotDrive.class);
+        startActivity(intent);
     }
 }

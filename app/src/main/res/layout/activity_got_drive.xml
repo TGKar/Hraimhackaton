@@ -9,11 +9,85 @@
         android:src="@drawable/driver_background" android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"></ImageView>
 
-    <Button
+    <android.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DriverScreen">
+    <TextView
+        android:id="@+id/saveStatment"
         android:layout_width="wrap_content"
+        android:textSize="32dp"
+        android:ems = "10"
+        android:layout_height="wrap_content"
+        android:text="invest 10 minutes and get 20 shekels!"/>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="you can pick up Noam"
+            android:layout_marginTop="20dp"
+            android:textSize="32dp"
+            android:ems = "10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Phone number: 0525215581"
+            android:layout_marginTop="20dp"
+            android:textSize="32dp"
+            android:ems = "10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/facebook"
+            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="Noam's Facebook"
+            android:textColor="#2D9DC8"
+            android:textSize="32dp"
+            android:ems = "10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:textSize="32dp"
+        android:ems = "10"
+        android:text="you should go out in 5 minuts"/>
+
+    <Button
+        android:layout_width="158dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:id="@+id/navigate_button"
         android:text="nav"
         />
+    </android.widget.LinearLayout>
+
 </RelativeLayout>
 

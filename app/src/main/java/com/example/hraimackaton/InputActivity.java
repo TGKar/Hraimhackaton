@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public abstract class InputActivity extends AppCompatActivity {
 
     abstract boolean isDriver();
@@ -33,7 +36,12 @@ public abstract class InputActivity extends AppCompatActivity {
         EditText commentsField = (EditText) findViewById(R.id.textViewComment);
         String comments = commentsField.getText().toString();
         boolean isDriver = isDriver();
-
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//
+//        Map<String, Object> childUpdates = new HashMap<>();
+//
+//        childUpdates.put("db/drivers/phone", phone);
+//        childUpdates.put("db/drivers/phone/comments", commentsField);
 
     }
 

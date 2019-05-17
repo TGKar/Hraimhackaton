@@ -108,14 +108,8 @@
             android:id="@+id/sendDriverInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="sendDriverInfo"
+            android:onClick="acceptRide"
             android:text="Send" />
-
-        <TextView
-            android:id="@+id/showMeTheMoney"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
 
 
     </android.widget.LinearLayout>

@@ -7,14 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
-public class gotDrive extends AppCompatActivity {
+public class got_ride_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Ride Details");
-        setContentView(R.layout.activity_got_drive);
+        setContentView(R.layout.activity_got_ride_activity);
 
         Button but2 = findViewById(R.id.navigate_button);
         but2.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +28,4 @@ public class gotDrive extends AppCompatActivity {
             }
         });
     }
-
-
 }
