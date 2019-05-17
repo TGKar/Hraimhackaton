@@ -2,17 +2,18 @@ package com.example.hraimackaton;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
-public class RiderScreen extends InputActivity {
+
+public class gotDrive extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rider_screen);
+        setContentView(R.layout.activity_got_drive);
 
         Button button = findViewById(R.id.navigate_button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -28,13 +29,5 @@ public class RiderScreen extends InputActivity {
         });
     }
 
-    public boolean isDriver() {
-        return false;
-    }
 
-
-//    public void found(View view) {
-//        Intent intent = new Intent(this, FoundDriver1.class);
-//        startActivity(intent);
-//    }
 }
